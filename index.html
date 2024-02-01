@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Karson Riley</title>
+		<link href="img/logoTypeface.png" rel="icon" type="image/png">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+		<script> /* Navigation */
+			
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+				document.getElementById("menuFlag").style.zIndex = "-2";
+			}
+			
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+				document.getElementById("menuFlag").style.zIndex = "2";
+			}
+			function projectShow() {
+				var heightS = String(document.getElementById("projectSub").style.height);
+				if(heightS == "180px"){
+					document.getElementById("projectSub").style.height = "0px";
+				}
+				else {
+					document.getElementById("projectSub").style.height = "180px";
+				}
+			}
+		</script>
+		
+	</head>
+	<body>
+		<a onclick="openNav()"><div id="menuFlag"><p>Menu</p></div></a>
+		<div id="menu">
+			<a onclick="openNav()"><p id="hamburger">&#9776;</p></a>
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html"><p>Home</p></a>
+				<a href="resume.html"><p>Resume</p></a>
+				<a href="javascript:void(0)" onclick="projectShow()"><p>Projects</p><div class="dwnArr"></div></a>
+				<div id="projectSub">
+					<a href="unio.html"><p>Unio</p></a>
+					<a href="harborside.html"><p>Harborside</p></a>
+					<a href="webDev.html"><p>Websites</p></a>
+					<a href="animation.html"><p>Animation</p></a>
+					<a href="videos.html"><p>Videography</p></a>
+<!--					<a href="games.html"><p>Game Dev</p></a>-->
+				</div>
+				
+				<a href="http://www.github.com/arson157" id="social"><img src="img/GitHubInverse.png"></a>
+				<a href="http://www.linkedin.com/in/karsonriley" id="social"><img src="img/Ininverse.png" style="margin:12px 2px;"></a>
+			</div>
+		</div>
+		<div id="head">
+			<img src="img/Asset%201.png" id="logo"/>
+		</div>
+		
+		<div id="main" ng-app="myApp" ng-controller="myCtrl">
+			
+			
+			<div id="TICTAC">
+<!--				<h1 style="width: 30%; position: absolute">Tic Tac Toe</h1>-->
+				
+				<div id="board">
+					
+					<div id="row">
+						<button ng-repeat="box in Board track by $index"  ng-click="Set($index)"><p>{{box}}</p></button>
+					</div>
+
+
+					<div id="row">
+					</div>
+					
+					<div id="c1" ng-style="c0"></div>
+					<div id="c2" ng-style="c1"></div>
+					<div id="c3" ng-style="c2"></div>
+
+					<div id="d1" ng-style="d1"></div>
+					<div id="d2" ng-style="d2"></div>
+					
+					<div id="r1" ng-style="r0"></div>
+					<div id="r2" ng-style="r3"></div>
+					<div id="r3" ng-style="r6"></div>
+					
+					
+					
+				</div>
+				
+				
+				
+				<script> /*TIC TAC TOE*/
+					var app = angular.module('myApp', []);
+					app.controller('myCtrl', function($scope) {
+						$scope.Board = [,,,,,,,,,]; //initilize board, columns 0,1,2; rows 0,3,6
+						$scope.players = ["X","O"]; //use for whos turn it is.
+						var play = 0; //start turn 0 "X"
+						var strike = ["d1","d2","c0","c1","c2","r0","r3","r6"]; //div elements which mark the winning diagonal/column/row
+						var endGame = 0; //game over marker
+						$scope.GameState = "Turn: "+$scope.players[play%2]; //indicator under the board
+						
+                        //on click if box is empty set to current player X or O; check for win.
+						$scope.Set = function(box){
+							
+							if($scope.Board[box]== "X" || $scope.Board[box]== "O" || endGame == 1){
+								return;
+							}
+							else{
+								$scope.Board[box] = $scope.players[play%2];
+								play++;
+								$scope.GameState = "Turn: "+$scope.players[play%2];
+								console.log(box);
+								console.log($scope.Board);
+								$scope.checkWin();
+							}
+						}
+						
+                        
+						$scope.checkWin = function(){
+                            //all elements in row the same and not null, end game and display winning strike
+							for(var i = 0; i<=7; i+=3){
+								
+								if($scope.Board[i] == $scope.Board[i+1] && $scope.Board[i+1] == $scope.Board[i+2] && 
+								  $scope.Board[i] != null){
+									endGame = 1;
+									var win = "r"+i;
+									$scope[win] = {display: 'inline-block'};
+									if($scope.Board[i] == "X")
+										$scope.GameState = "Winner: X";
+									else if($scope.Board[i] == "O")
+										$scope.GameState = "Winner: O";
+									
+								}
+							}
+                            //columns
+							for(var i = 0; i<=3; i++){
+								if($scope.Board[i] == $scope.Board[i+3] && $scope.Board[i+3] == $scope.Board[i+6] &&
+								  $scope.Board[i] != null){
+									endGame = 1;
+									var win = "c"+i;
+									$scope[win] = {display: 'inline-block'};
+									if($scope.Board[i] == "X")
+										$scope.GameState = "Winner: X";
+									else if($scope.Board[i] == "O")
+										$scope.GameState = "Winner: O";
+									
+								}
+							}
+                            //diagonal
+							if($scope.Board[0] == $scope.Board[4] && $scope.Board[4] == $scope.Board[8] &&
+							  $scope.Board[4] != null){
+								endGame = 1;
+								$scope.d1 = {display: 'inline-block'};
+								if($scope.Board[0] == "X")
+										$scope.GameState = "Winner: X";
+									else if($scope.Board[0] == "O")
+										$scope.GameState = "Winner: O";
+								
+							}
+                            //diagonal
+							else if($scope.Board[2] == $scope.Board[4] && $scope.Board[4] == $scope.Board[6] &&
+								   $scope.Board[4] != null){
+								endGame = 1;
+								$scope.d2 = {display: 'inline-block'};
+								if($scope.Board[2] == "X")
+										$scope.GameState = "Winner: X";
+									else if($scope.Board[2] == "O")
+										$scope.GameState = "Winner: O";
+								
+							}
+							//cats game
+							else if(play == 9 && endGame == 0){
+								$scope.GameState = "Cat Game";
+								endGame = 1;
+								
+							}
+							
+							
+						}
+						
+						$scope.reset = function(){
+							$scope.Board = [,,,,,,,,,];
+							play = 0;
+							endGame = 0;
+							$scope.GameState = "Turn: "+$scope.players[play%2];
+							$scope.c0 = {display: 'none'};
+							$scope.c1 = {display: 'none'};
+							$scope.c2 = {display: 'none'};
+							$scope.d1 = {display: 'none'};
+							$scope.d2 = {display: 'none'};
+							$scope.r0 = {display: 'none'};
+							$scope.r3 = {display: 'none'};
+							$scope.r6 = {display: 'none'};
+							
+							
+						}
+						
+						
+					});
+
+				</script>
+				
+				
+			</div>
+			
+			<h1 id="gameState">{{GameState}}</h1>
+			<button ng-click="reset()">Reset</button>
+			
+			<div style="height: 30px"></div>
+<!--			<h1>About Me:</h1>-->
+			
+			
+			
+		</div>
+	</body>
+</html>

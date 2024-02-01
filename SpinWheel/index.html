@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Best SpinWheel</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="winnerHold">
+            <div id="winnerBox">
+                <span id="winnerHead">
+                    <div onclick="closeWin()">&times;</div>
+                </span>
+                <p id="whoWonText">Congrats! The Winner is <span id="winName"></span>!</p>
+                <button id="removeWinner" onclick="kill()">Remove</button>
+            </div>
+        </div>
+        <canvas id="WheelCanvas" width="500" height="700"></canvas>
+        <br/>
+        <div id="buttonHolder">
+            <label for="namesArray">Paste names here, one per line.</label>
+            <textarea id="namesArray" type="text"></textarea>
+        
+            <button id="parse" onclick=parse()>Submit</button>
+            <button id="color" onclick=colorChange()>Color</button>
+        </div>
+        
+        <script src="wheel.js"></script>
+    </body>
+</html>

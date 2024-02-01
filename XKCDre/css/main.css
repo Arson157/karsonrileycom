@@ -1,0 +1,459 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.side{
+position: relative;
+float: left;
+width: 185px;
+height: 625px;
+border: solid 2px black;
+border-radius: 25px;
+background-color:#fff;
+margin: 5px;
+padding: 5px;
+}
+
+.side ul{
+list-style: none;
+padding-left: 10px;
+font-size: 2.3em;
+font-weight: bold;
+color: #6e7b91;
+}
+
+.side ol{
+list-style: none;
+margin: 0px;
+padding: -10px 10px -10px 0px;
+font-size: 0.8em;
+font-weight: normal;
+color: #6e7b91;
+}
+
+.menu a:link{
+text-decoration: none;
+color: #6e7b91;
+}
+
+.menu a:visited{
+color: #6e7b91;
+}
+
+.menu a:hover{
+text-decoration: underline;
+}
+
+.menu a:active{
+text-decoration: underline;
+}
+
+.menu2 a:link{
+text-decoration: none;
+color: #fff;
+border: 2px solid #39c;
+border-radius: 10px;
+background-color: #39c;
+}
+
+.menu2 a:visited{
+color: #fff;
+border: 2px solid #39c;
+}
+
+.menu2 a:hover{
+background-color: blue;
+border:5px solid blue;
+}
+
+.menu2 a:active{
+text-decoration: underline;
+}
+
+.top{
+position: relative;
+float: left;
+padding: 5px;
+width:960px;
+height: 100px;
+background-color: #fff;
+margin: 5px;
+border: solid 2px black;
+border-radius: 25px;
+text-align: center;
+}
+
+.topwhatif{
+position: relative;
+float: left;
+padding: 5px;
+width:960px;
+height: 160px;
+background-color: #fff;
+margin: 5px;
+border: solid 2px black;
+border-radius: 25px;
+}
+
+.top h1{
+margin: 5px 0px 0px 20px;
+float: left;
+}
+
+.main{
+background-color: #fff;
+position: relative;
+float: left;
+width: 960px;
+height: 625px;
+margin: 5px;
+padding: 5px;
+border: solid 2px black;
+border-radius: 25px;
+}
+
+.mainWhat{
+background-color: #fff;
+position: relative;
+float: left;
+width: 960px;
+height: 975px;
+margin: 5px;
+padding: 5px;
+border: solid 2px black;
+border-radius: 25px;	
+}
+
+.mainif {
+background-image: url(../img/graph-tile.png);
+background-color: transparent;
+border: 2px solid #39c;
+border-radius: 25px;
+padding: 0px 10px 0px 10px;
+margin: 10px;
+}
+
+.mainif img{
+display: block;
+margin: 0px auto;
+}
+
+.main h1{
+text-align:center;
+}
+
+.mainWhat h1{
+text-align:center;
+}
+
+body{
+background-color: #39c;
+font-family: Lucida,Helvetica,sans-serif;
+color: #000;
+}
+
+.background{
+margin: 20px;
+width: 1200px;
+height: 500px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.comic {
+position: relative;
+float: left;
+display: block;
+margin: 0px 40px 0px 40px;
+}
+
+.left {
+position: relative;
+display: block;
+width: 40px;
+height: 282px;
+float: left;
+background-color: #39c;
+margin: 0px 10px 0px 20px;
+text-align: center;
+border-radius: 20px;
+}
+
+.arrow{
+text-align: center;
+margin-top:120px;
+color: #fff;
+font-weight: bold;
+font-size: 2em;
+}
+
+.right {
+position: relative;
+display: block;
+width: 40px;
+height: 282px;
+float: right;
+background-color: #39c;
+margin: 0px 20px 0px 10px;
+border-radius: 20px;
+}
+
+.nav{
+margin: 350px auto 0px auto;
+text-align: center;
+}
+
+.nav p{
+display: inline;
+margin: 5px 20px;
+padding: 5px 20px;
+background-color: #39c;
+color: #fff;
+font-weight: bold;
+font-size: 1.8em;
+border-radius: 15px;
+border: 2px solid #39c;
+}
+
+.nav a:link {
+text-decoration: none;
+}
+
+.arc{
+margin: 20px;
+}
+
+.arc img{
+position: absolute;
+display: none;
+padding-left: 100px;
+}
+
+.arc a:link{
+text-decoration:none;
+color: #39c;
+}
+
+.arc a:hover{
+padding-left: 100px;
+}
+
+.arc a:hover img{
+display: block;
+}
+
+.arc a:visited{
+color: #39c;
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

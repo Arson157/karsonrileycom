@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Karson Riley</title>
+		<link href="img/logoTypeface.png" rel="icon" type="image/png">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script>
+
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+				document.getElementById("menuFlag").style.zIndex = "-2";
+			}
+			
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+				document.getElementById("menuFlag").style.zIndex = "2";
+			}
+			function projectShow() {
+				var heightS = String(document.getElementById("projectSub").style.height);
+				if(heightS == "180px"){
+					document.getElementById("projectSub").style.height = "0px";
+				}
+				else {
+					document.getElementById("projectSub").style.height = "180px";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<a onclick="openNav()"><div id="menuFlag"><p>Menu</p></div></a>
+		<div id="menu">
+			<a onclick="openNav()"><p id="hamburger">&#9776;</p></a>
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html"><p>Home</p></a>
+				<a href="resume.html"><p>Resume</p></a>
+				<a href="javascript:void(0)" onclick="projectShow()"><p>Projects</p><div class="dwnArr"></div></a>
+				<div id="projectSub">
+					<a href="unio.html"><p>Unio</p></a>
+					<a href="harborside.html"><p>Harborside</p></a>
+					<a href="webDev.html"><p>Websites</p></a>
+					<a href="animation.html"><p>Animation</p></a>
+					<a href="videos.html"><p>Videography</p></a>
+<!--					<a href="games.html"><p>Game Dev</p></a>-->
+					
+				</div>
+				<a href="http://www.github.com/arson157" id="social"><img src="img/GitHubInverse.png"></a>
+				<a href="http://www.linkedin.com/in/karsonriley" id="social"><img src="img/Ininverse.png" style="margin:12px 2px;"></a>
+			</div>
+		</div>
+
+		<div id="head2">
+			<img src="img/Asset%201@0.5x.png" id="logo"/>
+
+		</div>
+
+		<div id="main">
+			
+			<h1>Digital Modeling and Animation projects</h1>
+
+			<div id="articles">
+				<h1>2-D Animation</h1>
+				<p>Junior year project focused on character animation.</p>
+				<p><b>Programs Used:</b> After Effects, Photoshop</p>
+				<video src="img/CharacterAnimation.mp4" controls/>
+			</div>
+			<br/>
+
+			<div id="articles">
+				<h1>3-D Animation</h1>
+				<p>My sophomore assignment was to build a 3D animation from scratch. 
+				I selected the subject matter because I love skydiving and wanted to make an entertaining video. 
+				I built, animated and textured the plane and environment including lighting and rendering. 
+				The two people were imported from Maximo Fuse. The clothing and animations are my work. </p>
+				<p><b>Programs Used:</b> Maya (Animation, Modeling, Rendering), Fuse (Modeling)</p>
+				<p>Video is for entertainment purposes only, don't try this at home. </p>
+				<video src="img/3DFreeFall.mp4" width="1280px" controls/>
+
+			</div>
+			<br/>
+
+			<div id="articles">
+				<h1>Motion Capture</h1>
+				<p>I set up a Yost Lab capture system and mapped the movements to a rigged model.</p>
+				<video src="img/MoCap.mp4" controls/>
+			</div>
+
+			<br/>
+			<br/>
+		</div>
+
+	</body>
+</html>

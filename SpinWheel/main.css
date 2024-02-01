@@ -1,0 +1,76 @@
+body{
+    margin: 0px;
+}
+#WheelCanvas {
+    display: block;
+    margin: auto;
+}
+
+#namesArray {
+    display: block;
+    margin: auto;
+    height: 100px;
+    width: 400px;
+}
+
+#buttonHolder {
+    width: 400px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#parse, #color{
+    margin: 10px;
+}
+
+#winnerHold{
+    display: none;
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+}
+#winnerBox{
+    background: white;
+    margin: 250px auto;
+    height: 200px;
+    width: 500px;
+    border: 2px solid black;
+}
+#winnerBox button{
+    display: block;
+    width: 120px;
+    height: 40px;
+    margin: 0px auto;
+    font-size: 25px;
+    background-color: red;
+    border: 2px outset red;
+}
+#winnerHead{
+    display: block;
+    height: 35px;
+    width: 500px;
+    background: rgb(56, 56, 56);
+}
+#winnerHead div{
+    float: right;
+    font-size: 30px;
+    font-weight: 200;
+    color: white;
+    height: 30px;
+    margin: 0px 5px;
+    padding: 0px 5px;
+}
+#winnerHead div:hover{
+    color:red;
+    font-weight: 900;
+    cursor: pointer;
+}
+#winnerBox p{
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+}

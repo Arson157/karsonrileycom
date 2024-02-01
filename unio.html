@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Karson Riley</title>
+		<link href="img/logoTypeface.png" rel="icon" type="image/png">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script>
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+				document.getElementById("menuFlag").style.zIndex = "-2";
+			}
+			
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+				document.getElementById("menuFlag").style.zIndex = "2";
+			}
+
+			function projectShow() {
+				var heightS = String(document.getElementById("projectSub").style.height);
+				if(heightS == "180px"){
+					document.getElementById("projectSub").style.height = "0px";
+				}
+				else {
+					document.getElementById("projectSub").style.height = "180px";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<a onclick="openNav()"><div id="menuFlag"><p>Menu</p></div></a>
+		<div id="menu">
+			<a onclick="openNav()"><p id="hamburger">&#9776;</p></a>
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html"><p>Home</p></a>
+				<a href="resume.html"><p>Resume</p></a>
+				<a href="javascript:void(0)" onclick="projectShow()"><p>Projects</p><div class="dwnArr"></div></a>
+				<div id="projectSub">
+					<a href="unio.html"><p>Unio</p></a>
+					<a href="harborside.html"><p>Harborside</p></a>
+					<a href="webDev.html"><p>Websites</p></a>
+					<a href="animation.html"><p>Animation</p></a>
+					<a href="videos.html"><p>Videography</p></a>
+					<!--<a href="games.html"><p>Game Dev</p></a>-->
+				</div>
+				<a href="http://www.github.com/arson157" id="social"><img src="img/GitHubInverse.png"></a>
+				<a href="http://www.linkedin.com/in/karsonriley" id="social"><img src="img/Ininverse.png" style="margin:12px 2px;"></a>
+			</div>
+
+		</div>
+
+		<div id="head2">
+			<img src="img/Asset%201@0.5x.png" id="logo"/>
+
+		</div>
+		<div id="main">
+
+			<a href="Unio/indexUnio.html" target="_blank"><img id="unioLogo" src="img/UNIO_FINAL_BLACK.png"/><p>click to visit the demo</p></a>
+			
+			
+			
+			<h1>Miami University IMS Senior Project</h1>
+			
+			
+
+			<div id="UnioBack">
+
+
+
+				<div id="UnioText" style="padding-right: 6%; width:41%;">
+
+					<h2>Project Description</h2>
+
+					<p>The goal of UNIO was to apply our skills in web design and development to solve a real problem 
+						for the State Department.
+						We first traveled to Washington DC to observe and interview some employees.   
+						We listened to stories about how they work and interact with each other.  
+						We heard a high level of frustration especially from younger employees.  
+						When they were researching a particular subject, it was really hard to connect with someone else who may have
+						recently published or was currently working on a 
+						closely related topic.  They would find out after they published that someone else was writing on their topic. 
+						This would cause duplication of effort, out of date information or just not the best work 
+						reaching the hands of important people. 
+					</p>
+
+				</div>
+
+
+				<div id="UnioText">
+					<h2>Project accomplishments</h2>
+				
+					<ol>
+						<li>Created an enjoyable and intuitive web experience for employees as they search for 
+							interdepartmental knowledge and connections.
+						</li>
+
+						<li>Built a key-word search engine employees can use to bring up authors and content
+							related to their current research project. 
+						</li>
+
+						<li>Built in ‘trending topics’ that are constantly updated based on the frequency 
+							of discovery in employee documents.
+						</li>
+
+						<li>Created a familiar personalized contact section by using an approach similar to LinkedIn.
+						</li>
+
+					</ol>
+
+					<p>My individual contribution was all the coding and development behind the website. I created this 
+						 working demonstration for our final design presentation to the State Department. The team designed
+						 a website and put together a prototype. I set up an Apache Solr database and submitted two hundred 
+						 public documents to be indexed. Then we created a user database and populated it with actual state 
+						 department employees. Finally, I built the system which takes a search term, sends it to the Solr 
+						 database, finds the relevant people, sends them to the user database and then delivers all the important 
+						 information to the original user.
+					</p>
+
+				</div>
+				<br/>
+				<div id="clearboth"></div>
+			</div>
+			
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <title>Karson Riley</title>
+		<link href="img/logoTypeface.png" rel="icon" type="image/png">
+         <link rel="stylesheet" href="css/normalize.css">
+         <link rel="stylesheet" href="css/main.css">
+        <script>
+            function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+				document.getElementById("menuFlag").style.zIndex = "-2";
+			}
+			
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+				document.getElementById("menuFlag").style.zIndex = "2";
+			}
+            
+            function projectShow() {
+                var heightS = String(document.getElementById("projectSub").style.height);
+                if(heightS == "180px"){
+                    document.getElementById("projectSub").style.height = "0px";
+                }
+                else {
+                    document.getElementById("projectSub").style.height = "180px";
+                }
+            }
+        </script>
+     </head>
+    
+     <body>
+		 <a onclick="openNav()"><div id="menuFlag"><p>Menu</p></div></a>
+         <div id="menu">
+             <a onclick="openNav()"><p id="hamburger">&#9776;</p></a>
+              <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html"><p>Home</p></a>
+                <a href="resume.html"><p>Resume</p></a>
+                <a href="javascript:void(0)" onclick="projectShow()"><p>Projects</p><div class="dwnArr"></div></a>
+                  <div id="projectSub">
+					  <a href="unio.html"><p>Unio</p></a>
+					  <a href="harborside.html"><p>Harborside</p></a>
+                      <a href="webDev.html"><p>Websites</p></a>
+					  <a href="animation.html"><p>Animation</p></a>
+					  <a href="videos.html"><p>Videography</p></a>
+<!--					  <a href="games.html"><p>Game Dev</p></a>-->
+                  </div>
+				  <a href="http://www.github.com/arson157" id="social"><img src="img/GitHubInverse.png"></a>
+				<a href="http://www.linkedin.com/in/karsonriley" id="social"><img src="img/Ininverse.png" style="margin:12px 2px;"></a>
+            </div>
+         
+         </div>
+         
+         <div id="head2">
+			<img src="img/Asset%201@0.5x.png" id="logo"/>
+		 </div>
+         
+		 <div id="main">
+			 
+			 
+			 <h1>IMS Website Design and Development Projects</h1>
+			 <p>click images to visit sites</p>
+			 <br/>
+			 
+			 
+			 
+			 <div id="webDevBox">
+				 
+				 <h1>Redesign existing website XKCD.com</h1>
+				 
+				 <div id="webDevCont">
+					 <div style="float: left; width: 50%;">
+						 <a href="http://www.xkcd.com" target="_blank">
+						 	<img src="webs/oldxkcd.PNG" style="margin-left:10%; float:left;" />
+					 	 </a>
+					 </div>
+					 
+					 
+					 <div style="width:40%;float:left;">
+						 
+					 
+						 <h2 style="width: 75%; float: left; ">Existing Site</h2>
+
+						 <br/>
+
+						 <ul style="clear:left; ">
+
+							 <li>Too many navigation buttons</li>
+							 <li>Top of page visually cluttered</li>
+							 <li>Doesn't make best use of space, too narrow</li>
+
+						 </ul>
+					 </div>
+					 <div id="clearboth" style="height: 10px;">
+					 </div>
+					 <div style="float:left; width:40%; margin-top: 2.5%;">
+						 
+						 <h2 style="float:right; margin-right: 22%;">Redesigned Site</h2>
+						 <ul style="float:right; margin-right: 10%;">
+							 <li>Prioritized comic content</li>
+							 <li>Improved color scheme</li>
+							 <li>Simplified navigation</li>
+							 <li>Made the menu more obvious</li>
+							 <li>improved usability and readability </li>
+						 </ul>
+						 
+					 </div>
+					 
+					 
+					 <div style="float:left; width:58%; padding-right:2%;">
+						 <a href="XKCDre/index.html" target="_blank">
+						 	<img src="webs/xkcd.PNG">
+					 	</a>
+					 
+					 </div>
+					 
+					 <div id="clearboth">
+					 </div>
+					 <br/>
+				 </div>
+				 
+			 </div>
+			 
+			 <br/>
+			 
+			 <div id="webDevBox">
+				 <h1>Create new Brand and website</h1>
+				 <div id="webDevCont">
+					 
+					 <p>Team Super 8 spent a semester creating a film. We then built a website to showcase our film and all the 
+					 associated work.</p>
+					 <br/>
+					 <a href="IMS201/index.html" target="_blank">
+						 <img src="webs/Super8.PNG" style="width: 60%;float:right;margin-right: 4%;"/>
+					 </a>
+
+					 <div style="width: 30%; float:left; padding-left: 5%;">
+						 <h2 style="margin-left: -80px;">Features Included</h2>
+						 <ul>
+							 <li>Creating a brand through digital experience</li>
+							 <li>A useable navigation system</li>
+							 <li>Incorporating different media types</li>
+							 <ul>
+								 <li>Video</li>
+								 <li>3-D models</li>
+								 <li>Tables</li>
+							 </ul>
+							 
+
+						 </ul>
+					 </div>
+					 <div id="clearboth">
+					 </div>
+					 
+				 </div>
+				 
+				 <div id="clearboth">
+				 </div>
+				 <br>
+			 </div>
+			 
+			 <br/>
+			 
+			 <div id="webDevBox">
+				 <h1>Build website for fictitious local business</h1>
+				 <div id="webDevCont">
+					 
+					 <p>Team worked collaboratively to create a responsive website for House of Carbs.</p>
+					<br/>
+					 <a href="IMS257/Index.html" target="_blank">
+						 <img src="webs/257.PNG" style="width: 60%;float:right;margin-right: 4%;"/>
+					 </a>
+
+					 <div style="width: 30%; float:left; padding-left: 5%;">
+						 <h2 style="margin-left: -170px;">Highlights</h2>
+						 <ul>
+							 <li>Javascript and jQuery interactive features</li>
+							 <ul>
+								 <li>More info on food items</li>
+								 <li>Drop down FAQ</li>
+								 <li>Mobile designed team page</li>
+							 </ul>
+							 <li style="clear:both;">A useable navigation system</li>
+							 <li>Iconic logo and highly visual use of photos</li>
+							 
+							 
+
+						 </ul>
+					 </div>
+				 <div id="clearboth">
+				 </div>
+				 <br>
+			 </div>
+			 <br/>
+			 
+             
+         </div>
+			 <br/>
+
+
+         
+    </body>
+</html>
